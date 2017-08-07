@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.zmcursor.daily">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:name=".DailyAPP"
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/appicon"
+        android:label="@string/app_name"
+        android:supportsRtl="true">
+        <activity
+            android:name=".UI.Activity.SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashStyle">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".UI.Activity.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MainStyle" />
+        <activity
+            android:name=".UI.Activity.ReadActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/OtherStyle" />
+
+        <service
+            android:name=".MVPModel.service.DataService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity
+            android:name=".UI.Activity.TestActivity"
+            android:theme="@style/OtherStyle" />
+        <activity
+            android:name=".UI.Activity.SettingsActivity"
+            android:label="@string/title_activity_settings"
+            android:parentActivityName=".UI.Activity.SwipeBackActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.zmcursor.daily.UI.Activity.SwipeBackActivity" />
+        </activity>
+    </application>
+
+</manifest>

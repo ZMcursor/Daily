@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/item_size"
+    android:layout_marginLeft="@dimen/grid"
+    android:layout_marginRight="@dimen/grid"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    app:cardBackgroundColor="@color/item_bg"
+    app:cardCornerRadius="@dimen/grid"
+    app:cardElevation="@dimen/grid"
+    app:cardPreventCornerOverlap="false"
+    app:cardUseCompatPadding="false"
+    app:contentPadding="@dimen/Spacing_16">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/story_title"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="@dimen/Spacing_16"
+            android:layout_weight="1"
+            android:lineSpacingExtra="@dimen/grid"
+            android:textSize="@dimen/text_14" />
+
+        <com.zmcursor.daily.UI.View.MyImageView
+            android:id="@+id/story_image"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>
